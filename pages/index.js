@@ -1,5 +1,5 @@
-import Slider from '../comps/slider'
+import Simple from '../simple/show'
 
 export default () => (
-  <Slider />
+  <Simple />
 )
