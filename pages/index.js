@@ -1,7 +1,8 @@
-//import Simple from '../simple/show'
-import Simple from '../simple/play'
-import Carousel from '../carousel/show'
+import Show from '../slides/show'
 
 export default () => (
-  <Carousel />
+  <div className='app'>
+    <p>Hello</p>
+    <Show />
+  </div>
 )

@@ -1,31 +1,46 @@
 import React from 'react'
-//import Slide from './slide'
-import Item from './item'
+import Carousel from './carousel'
 
 export default () => {
   return (
     <div className='show'>
-      <Item index="0" msg="test"/>
+      <Carousel />
       <style jsx>{`
-        .show {
+        .pic {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          position: absolute;
+        }
+        .pic img {
+          width: 100px;
+          height: 100px;
+        }
+        .current {
+          left: 100px;
+        }
+        .current .move {
+          left: 0;
+          transition: all .5s ease;
+        }
+        .next {
+          left: 200px;
+        }
+        .next .move {
+          left: 100px;
+          transition: all .5s ease;
+        }
+        .pic-wrapper {
+          background: lightgray;
+          width: 400%;
+          position: absolute;
+        }
+        .mask {
+          left: 50px;
+          overflow: hidden;
           width: 100%;
-          height: 100%;
-          text-align: center;
-          position: relative;;
-        }
-        .slide {
-          width: 800px;
-          height: 360px;
-          background-color: red;
-          margin: 0 auto;
-        }
-        .slide-0 {
-          background: url("/static/monarch.png") no-repeat center;
-          height: 360px;
-          width: 100%;
-        }
-        #slide-1 {
-          background-image: url("/static/monarch.png");
+          height: 120px;
+          position: absolute;
         }
       `}</style>
     </div>    
